@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-size: 20px;
 }
 
 canvas {
@@ -24,7 +25,7 @@ canvas {
   text-align: center;
 }
 
-.loader {
+#loader {
   border: 16px solid #cccccc;
   border-top: 16px solid #414141;
   border-radius: 50%;
