@@ -1,7 +1,7 @@
 var w = 600, h = 800, x = 0, y = 0;
 var resizeTimer;
 
-var greyscale = true;
+var greyscale = false;
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
