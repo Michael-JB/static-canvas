@@ -6,6 +6,31 @@ var greyscale = false;
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
+$(window).on("load", function() {
+  showLoader();
+  generateStatic();
+  hideLoader();
+});
+
+$(window).resize(function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    showLoader();
+    generateStatic();
+    hideLoader();
+  }, 250);
+});
+
+function showLoader() {
+  $("#content").hide();
+  $("#welcome").show();
+}
+
+function hideLoader() {
+  $("#welcome").hide();
+  $("#content").show();
+}
+
 function generateStatic() {
   setDimensions();
   for (i = 0; i < w * h; i++) {
@@ -27,13 +52,6 @@ function generateRandomColour(greyscale) {
   }
 
   return col;
-}
-
-function onResize() {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
-    generateStatic();
-  }, 250);
 }
 
 function setDimensions() {

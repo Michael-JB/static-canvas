@@ -11,11 +11,21 @@
     <meta name="author" content="Michael Barlow">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
-  <body onresize="onResize()">
-    <canvas id="canvas"></canvas>
+  <body>
+
+    <div id="welcome" class="center-screen">
+      <div class="loader"></div>
+      <p>Loading...</p>
+    </div>
+
+    <div id="content">
+      <canvas id="canvas"></canvas>
+    </div>
+
     <script src="js/index.js"></script>
-    <script>generateStatic();</script>
+
   </body>
 </html>
