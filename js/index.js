@@ -36,7 +36,7 @@ function generateStatic() {
   for (i = 0; i < w * h; i++) {
     x = i % w;
     y = Math.floor(i / w);
-  
+
     ctx.fillStyle = 'rgb(' + generateRandomColour(greyscale).join(', ') + ')';
     ctx.fillRect(x, y, 1, 1);
   }
